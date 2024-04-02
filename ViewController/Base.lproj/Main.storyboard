@@ -1,24 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rw4-I5-FhW">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WvD-1F-Po6">
+                                <rect key="frame" x="85.333333333333329" y="133" width="222.33333333333337" height="28.666666666666657"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHI-iO-2cM">
+                                <rect key="frame" x="117.66666666666669" y="723" width="158" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go To Second VC"/>
+                                <connections>
+                                    <segue destination="KBb-uJ-XmL" kind="push" id="18N-D7-5Xv"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XiY-KH-TEg">
+                                <rect key="frame" x="20" y="211.66666666666666" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ll7-xB-Zc9">
+                                <rect key="frame" x="147.33333333333334" y="295.66666666666669" width="98.333333333333343" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Kontrol Et"/>
+                                <connections>
+                                    <action selector="CheckClickedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Arx-u5-JPx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ll7-xB-Zc9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jkb-4n-ZHx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XiY-KH-TEg" secondAttribute="trailing" constant="20" id="L1f-Cb-ecG"/>
+                            <constraint firstItem="WvD-1F-Po6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="POd-H2-dVx"/>
+                            <constraint firstItem="XiY-KH-TEg" firstAttribute="top" secondItem="WvD-1F-Po6" secondAttribute="bottom" constant="50" id="Ty6-Ou-Qeq"/>
+                            <constraint firstItem="XiY-KH-TEg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iIG-uC-hmp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jHI-iO-2cM" secondAttribute="bottom" constant="60" id="jtB-dU-Jw2"/>
+                            <constraint firstItem="Ll7-xB-Zc9" firstAttribute="top" secondItem="XiY-KH-TEg" secondAttribute="bottom" constant="50" id="lvp-n8-m3w"/>
+                            <constraint firstItem="jHI-iO-2cM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="skY-JJ-e3L"/>
+                            <constraint firstItem="WvD-1F-Po6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zNy-8R-OwT"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Epv-L9-YSv"/>
+                    <connections>
+                        <outlet property="labelFirst" destination="WvD-1F-Po6" id="oh8-p2-X1l"/>
+                        <outlet property="textFieldPassword" destination="XiY-KH-TEg" id="5n6-BN-QMe"/>
+                        <segue destination="KBb-uJ-XmL" kind="show" identifier="toSecondVC" id="gLm-Y9-wot"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1063.3587786259541" y="3.5211267605633805"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="UaY-Uh-6Wf">
+            <objects>
+                <viewController id="KBb-uJ-XmL" customClass="SecondViewController" customModule="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sYw-wZ-sTi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60c-Mg-usL">
+                                <rect key="frame" x="68" y="133" width="257.33333333333331" height="28.666666666666657"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Found Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbO-z4-TYe">
+                                <rect key="frame" x="131.33333333333331" y="211.66666666666666" width="130.33333333333331" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RPP-Nl-mco"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rbO-z4-TYe" firstAttribute="centerX" secondItem="sYw-wZ-sTi" secondAttribute="centerX" id="2da-aP-H1i"/>
+                            <constraint firstItem="rbO-z4-TYe" firstAttribute="top" secondItem="60c-Mg-usL" secondAttribute="bottom" constant="50" id="2tg-1I-sec"/>
+                            <constraint firstItem="60c-Mg-usL" firstAttribute="top" secondItem="RPP-Nl-mco" secondAttribute="top" constant="30" id="jPs-hx-EAa"/>
+                            <constraint firstItem="60c-Mg-usL" firstAttribute="centerX" secondItem="sYw-wZ-sTi" secondAttribute="centerX" id="tPH-cV-sQ1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bse-fe-3EC"/>
+                    <connections>
+                        <outlet property="labelFoundedPassword" destination="rbO-z4-TYe" id="vHh-1t-YGj"/>
+                        <outlet property="labelSecond" destination="60c-Mg-usL" id="v7X-iZ-wKr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mp8-rC-3Px" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1805.3435114503816" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jtv-o0-M5I">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rw4-I5-FhW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mfd-d6-1TG">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="S11-k8-Pbw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1qf-jt-Ap4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.64122137404578" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="18N-D7-5Xv"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
